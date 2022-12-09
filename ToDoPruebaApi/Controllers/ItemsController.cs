@@ -27,13 +27,13 @@ namespace ToDoPruebaApi.Controllers
         {
             return _itemsService.GetById(id);
         }
-        [HttpPost()]
+        [HttpPost]
         public IActionResult Add([FromBody] Item item)
         {
             _itemsService.Add(item);
             return Ok();
         }
-        [HttpPut()]
+        [HttpPut]
         public IActionResult Update([FromBody] Item item, Guid id)
         {
             _itemsService.Update(item, id);
