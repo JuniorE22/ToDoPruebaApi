@@ -33,7 +33,7 @@ namespace ToDoPruebaApi.Controllers
             _itemsService.Add(item);
             return Ok();
         }
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult Update([FromBody] Item item, Guid id)
         {
             _itemsService.Update(item, id);
